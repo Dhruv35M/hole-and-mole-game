@@ -1,11 +1,9 @@
-/* Reset default styles */
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-/* Global styles */
 body {
   font-family: cursive;
   background-color: #191919;
@@ -33,7 +31,6 @@ h1 {
   text-align: center;
 }
 
-/* Buttons */
 .start-btn {
   padding: 10px 25px;
   outline: none;
@@ -51,7 +48,6 @@ h1 {
   box-shadow: 1px 2px 4px #185fc2b0;
 }
 
-/* Difficulty levels */
 .levels {
   font-size: 20px;
   display: flex;
@@ -59,7 +55,6 @@ h1 {
   justify-content: center;
 }
 
-/* Style for each difficulty level */
 .levels > div {
   margin: 20px;
 }
@@ -74,7 +69,6 @@ h1 {
   color: #ff0000;
 }
 
-/* game board */
 .game {
   width: 600px;
   height: 400px;
@@ -83,14 +77,12 @@ h1 {
   margin: 0 auto;
 }
 
-/* holes on the game board */
 .hole {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
-/* mole inside hole */
 .hole:after {
   background: url("img/hole.png") bottom center no-repeat;
   background-size: contain;
@@ -102,7 +94,6 @@ h1 {
   bottom: -30px;
 }
 
-/* moles */
 .mole {
   position: absolute;
   top: 100%;
@@ -114,12 +105,10 @@ h1 {
   cursor: pointer;
 }
 
-/* mole when visible */
 .hole.up .mole {
   top: 0;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   h1 {
     padding: 20px;

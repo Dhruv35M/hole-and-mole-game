@@ -1,4 +1,3 @@
-// Selecting all the elements from the DOM
 const holes = document.querySelectorAll(".hole");
 const scoreBoard = document.querySelector(".score");
 const moles = document.querySelectorAll(".mole");
@@ -19,12 +18,10 @@ function difficultyLevel() {
   }
 }
 
-// random time between min and max
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-// Select a random hole to pop up the mole
 function randomHole(holes) {
   const idx = Math.floor(Math.random() * holes.length);
   const hole = holes[idx];
@@ -35,7 +32,6 @@ function randomHole(holes) {
   return hole;
 }
 
-// make the mole appear and disappear
 function peep(show, hide) {
   const time = randomTime(show, hide);
   const hole = randomHole(holes);
@@ -62,7 +58,6 @@ function startGame() {
     hide = 800;
   }
 
-  // hiding start button while game running
   scoreBoard.textContent = 0;
   timeUp = false;
   startBtn.innerHTML = "running..";
@@ -70,10 +65,8 @@ function startGame() {
   levels.style.visibility = "hidden";
   score = 0;
 
-  // Start the game by making moles appear
   peep(show, hide);
 
-  // Finish the game after 15 seconds
   setTimeout(() => {
     timeUp = true;
     startBtn.innerHTML = "start!";
@@ -82,7 +75,6 @@ function startGame() {
   }, 15000);
 }
 
-// update the score on clicking the mole
 function hitTheMole(e) {
   if (!e.isTrusted) {
     return;
