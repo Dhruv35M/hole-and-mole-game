@@ -17,11 +17,19 @@ h1 {
   margin-top: 45px;
 }
 
+.score-block {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  background-color: #2f2e2e;
+  border-radius: 8px;
+  padding: 12px;
+  color: #28a745;
+}
+
 .score {
-  color: #4caf50;
-  background: #302f2fed;
+  color: #fff;
   padding: 1rem;
-  line-height: 1;
   border-radius: 1rem;
   display: inline-block;
 }
@@ -29,23 +37,41 @@ h1 {
 .controls {
   margin: 5px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.controls-content {
+  padding: 10px 25px;
+  font-size: 24px;
+  outline: none;
+  color: #fff;
+  border: 0px;
 }
 
 .start-btn {
-  padding: 10px 25px;
-  outline: none;
-  font-size: 24px;
-  background: #c2185b;
-  color: #fff;
-  border: 0px;
-  border-radius: 0.5rem;
-  box-shadow: 1px 2px 4px #c2185bb0;
+  background: #28a745;
+  box-shadow: 1px 2px 4px #28a745;
+  border-radius: 0 18px 18px 0;
   cursor: pointer;
 }
 
 .start-btn:hover {
-  background: #187bc2;
-  box-shadow: 1px 2px 4px #185fc2b0;
+  background: #218838;
+  box-shadow: 1px 2px 4px #218838;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  box-shadow: 1px 2px 4px #e74c3c;
+  border-radius: 0 18px 18px 0;
+  cursor: pointer;
+  display: none;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+  box-shadow: 1px 2px 4px #c0392b;
 }
 
 .levels {
@@ -67,6 +93,12 @@ h1 {
 }
 .levels > div:nth-child(3) {
   color: #ff0000;
+}
+
+.timer {
+  background: #2f2e2e;
+  box-shadow: 1px 2px 4px #2f2e2e;
+  border-radius: 18px 0 0 18px;
 }
 
 .game {

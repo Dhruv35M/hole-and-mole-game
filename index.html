@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Hole and Mole Game</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <h1>Catch me, If you can <span class="score">0</span></h1>
+  <link rel="stylesheet" href="style.css" />
+  <title>Hole and Mole Game</title>
+</head>
 
-    <div class="levels">
-      <div>
-        <input type="radio" name="level" id="easy" checked />
-        <label for="easy">Easy</label><br />
-      </div>
-      <div>
-        <input type="radio" name="level" id="medium" />
-        <label for="medium">Medium</label><br />
-      </div>
-      <div>
-        <input type="radio" name="level" id="hard" />
-        <label for="hard">Hard</label><br />
-      </div>
+<body>
+  <h1>Catch me, If you can</h1>
+  <h2 class="score-block">Score:<span class="score">0</span></h2>
+
+  <div class="levels">
+    <div>
+      <input type="radio" name="level" id="easy" checked />
+      <label for="easy">Easy</label><br />
     </div>
-
-    <div class="controls">
-      <button class="start-btn" onClick="startGame()">Start!</button>
+    <div>
+      <input type="radio" name="level" id="medium" />
+      <label for="medium">Medium</label><br />
     </div>
-
-    <div class="game">
-      <div class="hole hole1">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole2">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole3">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole4">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole5">
-        <div class="mole"></div>
-      </div>
-      <div class="hole hole6">
-        <div class="mole"></div>
-      </div>
+    <div>
+      <input type="radio" name="level" id="hard" />
+      <label for="hard">Hard</label><br />
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <div class="controls">
+    <input type="number" class="controls-content timer" min="5" max="1000" step="5" placeholder="duration" />
+    <button class="controls-content start-btn" onClick="startGame()">Start</button>
+    <button class="controls-content cancel-btn" onClick="endGame()">Cancel</button>
+  </div>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
